@@ -5,15 +5,17 @@
 Summary:	hessian binary web service protocol
 Name:		java-hessian
 Version:	3.2.1
-Release:	0.1
+Release:	1
 License:	Apache v2.0
 Group:		Libraries/Java
 Source0:	http://hessian.caucho.com/download/hessian-%{version}-src.jar
 # Source0-md5:	da84b17bc21deb9a152cce2a9d1429b7
 Patch0:		%{name}-libgcj.patch
 URL:		http://hessian.caucho.com/
+BuildRequires:	java-commons-httpclient
 BuildRequires:	java-gcj-compat-devel
 BuildRequires:	java-servletapi5
+Requires:	java-commons-httpclient
 Requires:	java-servletapi5
 Requires:	jpackage-utils
 BuildArch:	noarch
