@@ -1,0 +1,19 @@
+--- java-hessian-3.2.1/com/caucho/hessian/client/HessianProxy.java~	2008-10-14 16:09:04.000000000 +0200
++++ java-hessian-3.2.1/com/caucho/hessian/client/HessianProxy.java	2009-03-11 14:18:43.000000000 +0100
+@@ -301,16 +301,6 @@
+     boolean isValid = false;
+ 
+     try {
+-      // Used chunked mode when available, i.e. JDK 1.5.
+-      if (_factory.isChunkedPost() && conn instanceof HttpURLConnection) {
+-	try {
+-	  HttpURLConnection httpConn = (HttpURLConnection) conn;
+-
+-	  httpConn.setChunkedStreamingMode(8 * 1024);
+-	} catch (Throwable e) {
+-	}
+-      }
+-    
+       addRequestHeaders(conn);
+ 
+       OutputStream os = null;
