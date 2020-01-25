@@ -1,5 +1,4 @@
 
-%include	/usr/lib/rpm/macros.java
 
 %define		srcname	hessian
 Summary:	hessian binary web service protocol
